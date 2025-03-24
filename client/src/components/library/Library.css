@@ -1,0 +1,175 @@
+/* Library Container */
+.library-container {
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme transitions */
+}
+
+.library-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.message {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: var(--text-color); /* Dynamic text color */
+}
+
+.message.success {
+  color: green; /* Specific style for success messages */
+}
+
+.message.error {
+  color: red; /* Specific style for error messages */
+}
+
+/* Book Card */
+.Book-card {
+  display: flex;
+  position: relative;
+  /*border: 1px solid var(--text-color); /* Dynamic border color */
+  padding: 10px;
+  margin-bottom: 10px;
+  align-items: flex-start;
+  background-color: var(--button-bg); /* Dynamic background color */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.4s ease-out forwards;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/* Delete Button */
+.delete-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  background-color: #ff4d4d; /* Keep specific red for delete */
+  color: var(--bg-color); /* Ensure text adapts to background */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Book Image */
+.book-image {
+  max-width: 100px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+/* Book Details */
+.book-details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: var(--text-color); /* Dynamic text color */
+}
+
+.book-details p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: var(--text-color); /* Dynamic text color */
+}
+
+/* Status Badge */
+.status {
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: var(--bg-color); /* Dynamic text color */
+  display: inline-block;
+}
+
+.status.to-read {
+  background-color: #ffcc00; /* Retain specific colors for statuses */
+}
+
+.status.reading {
+  background-color: #007bff;
+}
+
+.status.finished {
+  background-color: #28a745;
+}
+
+/* Status Buttons */
+.status-buttons {
+  margin-top: 10px;
+}
+
+.status-button {
+  padding: 5px;
+  margin-right: 5px;
+  background-color: var(--button-bg); /* Dynamic background color */
+  color: var(--button-text); /* Dynamic text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.status-button.active {
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.status-button:first-of-type {
+  background-color: var(--button-bg); /* Optional dynamic adaptation */
+}
+
+.status-button:nth-of-type(2) {
+  background-color: var(--button-bg);
+}
+
+.status-button:nth-of-type(3) {
+  background-color: var(--button-bg);
+}
+
+/* Book card fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Smooth transition for removing a book */
+.Book-card.removing {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.3s ease-out;
+}
+
+/* Transition effects for entering and exiting */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 300ms ease-out;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 300ms ease-out;
+}

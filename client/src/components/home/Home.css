@@ -1,0 +1,125 @@
+/* Container for the entire home page */
+.home-container {
+  text-align: center;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/* Banner Section */
+.home-banner {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.home-banner p {
+  font-size: 1.2rem;
+  color: var(--text-color); /* Inherits dynamic text color */
+}
+
+/* Navigation Buttons */
+.home-navigation {
+  margin-bottom: 40px;
+}
+
+.home-button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-button.search {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+.home-button.library {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+/* Featured Books Section */
+.featured-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--text-color); /* Inherits dynamic text color */
+}
+
+.featured-books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Book Cards */
+.book-card {
+  /*border: 1px solid var(--text-color); /* Uses dynamic border color */
+  border-radius: 8px;
+  padding: 10px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
+.book-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.no-cover {
+  width: 100%;
+  height: 200px;
+  background-color: var(--text-color); /* Background matches text for dark mode */
+  color: var(--bg-color); /* Text color adapts for visibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.book-title {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.book-author {
+  font-size: 0.85rem;
+  color: var(--text-color);
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+}
