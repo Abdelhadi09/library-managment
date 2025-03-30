@@ -98,14 +98,14 @@
 .no-cover {
   width: 100%;
   height: 200px;
-  background-color: var(--text-color); /* Background matches text for dark mode */
-  color: var(--bg-color); /* Text color adapts for visibility */
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--bg-secondary, #eee); /* Dynamic background */
   border-radius: 5px;
-  margin-bottom: 10px;
-  font-size: 0.9rem;
+  color: var(--text-secondary, #666);
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .book-title {
@@ -122,4 +122,39 @@
 /* Error Message */
 .error-message {
   color: red;
+}
+/* Subject Buttons */
+.subject-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.subject-button {
+  padding: 10px 20px;
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.subject-button.active {
+opacity: 0.5;/* Active button background */
+  color: var(--text-color); /* Text color stays dynamic */
+  transform: scale(1.05); /* Slightly enlarge the active button */
+}
+
+.subject-button:hover {
+  background-color: var(--secondary-color); /* Hover color */
+}
+
+/* Loading and Error Messages */
+.error-message {
+  color: var(--error-color, red); /* Dynamic error color */
+  text-align: center;
+  margin: 20px 0;
 }

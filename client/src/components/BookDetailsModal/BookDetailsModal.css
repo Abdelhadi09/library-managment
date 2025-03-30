@@ -45,8 +45,11 @@
   width: 100%; /* Maintain the full width */
   height: auto; /* Keep the aspect ratio */
   max-height: 300px; /* Restrict the height */
-  object-fit: cover; /* Ensure the image is cropped gracefully */
+  object-fit:scale-down; /* Ensure the image is cropped gracefully */
   margin: 10px 0;
+  border-radius: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 }
 .reviews-section {
   margin-top: 20px;

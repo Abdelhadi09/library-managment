@@ -95,6 +95,7 @@ function SearchBooks() {
   };
 
   const openBookDetails = (book) => {
+    console.log("Selected book:", book);
     setSelectedBook(book); // Set the selected book for the modal
   };
 

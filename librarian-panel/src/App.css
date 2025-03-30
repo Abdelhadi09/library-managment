@@ -1,0 +1,34 @@
+/* Default (Light Mode) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #1976d2;
+  --secondary-color: #f44336;
+  --paper-bg: #f9f9f9;
+}
+
+/* Dark Mode */
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+  --primary-color: #1976d2;
+  --secondary-color: #ad0f44;
+  --paper-bg: #1e1e1e;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/* Apply colors */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* For Material-UI Paper components (if needed) */
+.MuiPaper-root {
+  background-color: var(--paper-bg) !important;
+  color: var(--text-color) !important;
+}
+*, *::before, *::after {
+  font-family: inherit;
+}

@@ -6,6 +6,41 @@
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme transitions */
 }
+.book-list {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Space between book cards */
+}
+.book-list > div {
+  flex: 1 1 calc(25% - 20px); /* Adjust width to fit 4 cards in a row */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .book-list > div {
+    flex: 1 1 calc(33.33% - 20px); /* 3 cards in a row */
+  }
+}
+@media (max-width: 900px) {
+  .book-list > div {
+    flex: 1 1 calc(50% - 20px); /* 2 cards in a row */
+  }
+}
+@media (max-width: 600px) {
+  .book-list > div {
+    flex: 1 1 calc(100% - 20px); /* 1 card in a row */
+  }
+}
+/* Library Title */
+.library-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--text-color); /* Dynamic text color */
+}
+
 
 .library-container h2 {
   font-size: 1.8rem;
@@ -35,12 +70,13 @@
   margin-bottom: 10px;
   align-items: flex-start;
   background-color: var(--button-bg); /* Dynamic background color */
-  border-radius: 5px;
+  border-radius: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   opacity: 0;
   transform: translateY(20px);
   animation: fadeIn 0.4s ease-out forwards;
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  width: 25%;
 }
 
 /* Delete Button */
@@ -52,7 +88,7 @@
   background-color: #ff4d4d; /* Keep specific red for delete */
   color: var(--bg-color); /* Ensure text adapts to background */
   border: none;
-  border-radius: 5px;
+  border-radius: 16px;
   cursor: pointer;
   z-index: 1;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -62,7 +98,7 @@
 .book-image {
   max-width: 100px;
   margin-right: 20px;
-  border-radius: 5px;
+  border-radius: 16px;
 }
 
 /* Book Details */
@@ -81,7 +117,7 @@
 /* Status Badge */
 .status {
   padding: 4px 8px;
-  border-radius: 5px;
+  border-radius: 16px;
   font-weight: bold;
   color: var(--bg-color); /* Dynamic text color */
   display: inline-block;
@@ -110,7 +146,7 @@
   background-color: var(--button-bg); /* Dynamic background color */
   color: var(--button-text); /* Dynamic text color */
   border: none;
-  border-radius: 5px;
+  border-radius: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }

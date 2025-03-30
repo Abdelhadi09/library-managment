@@ -66,8 +66,8 @@ const ResponsiveAppBar = ({ theme, toggleTheme }) => {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* Logo */}
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          {/* Logo 
+          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -76,14 +76,14 @@ const ResponsiveAppBar = ({ theme, toggleTheme }) => {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              fontFamily: 'Raleway',
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              letterSpacing: '.1rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
           >
-            MyApp
+            A.T Library
           </Typography>
 
           {/* Navigation Menu for Small Screens */}

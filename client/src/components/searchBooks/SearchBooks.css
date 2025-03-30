@@ -22,7 +22,7 @@
   margin-right: auto;
   font-size: 1rem;
   border: 1px solid var(--text-color); /* Dynamic border color */
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: var(--button-bg);
   color: var(--button-text);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -72,7 +72,7 @@
 /* Book Card */
 .Book-card {
   /*border: 1px solid var(--text-color); /* Uses dynamic border color */
-  border-radius: 5px;
+  border-radius: 16px;
   padding: 10px;
   background-color: var(--button-bg); /* Card background color */
   color: var(--button-text); /* Card text color */
@@ -89,7 +89,7 @@
 .book-image {
   width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 16px;
   margin-bottom: 10px;
 }
 
@@ -134,7 +134,7 @@
   padding: 10px;
   margin: 10px auto; /* Center-align dropdowns */
   border: 1px solid var(--text-color); /* Dynamic border color */
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: var(--button-bg); /* Dynamic background color */
   color: var(--text-color); /* Dynamic text color */
   font-size: 1rem;
